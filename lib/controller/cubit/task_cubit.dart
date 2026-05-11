@@ -7,11 +7,11 @@ part 'task_state.dart';
 class TaskCubit extends Cubit<TaskState> {
   TaskCubit() : super(TaskInitial());
 
-  void addTasl(Taskmodel model) {
+  void addTask(Taskmodel model) {
     emit(updatetaskstate([...state.taskslist, model]));
   }
 
-  void removetask(int id) {
+  void removetask(String id) {
     final newlist = state.taskslist
         .where((element) => element.id != id)
         .toList();
@@ -19,7 +19,7 @@ class TaskCubit extends Cubit<TaskState> {
     emit(updatetaskstate(newlist));
   }
 
-  void toggleTask(int id) {
+  void toggleTask(String id) {
     final List<Taskmodel> newList = state.taskslist.map<Taskmodel>((task) {
       return task.id == id
           ? task.copyWith(isCompleted: !task.isCompleted)
