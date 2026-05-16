@@ -45,7 +45,6 @@ class _TodoScreenState extends State<TodoScreen> {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
-          // إضافة إضاءة خفيفة في زاوية الشاشة
           gradient: RadialGradient(
             center: const Alignment(-0.8, -0.7),
             radius: 0.8,
@@ -99,7 +98,6 @@ class _TodoScreenState extends State<TodoScreen> {
     );
   }
 
-  // الهيدر بتصميم أنيق
   Widget _buildHeader(int completed, int total) {
     return Row(
       children: [
@@ -126,7 +124,7 @@ class _TodoScreenState extends State<TodoScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
-              "Manager",
+              "Selmi",
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 26,
@@ -146,7 +144,6 @@ class _TodoScreenState extends State<TodoScreen> {
     );
   }
 
-  // كارت التقدم الاحترافي
   Widget _buildProgressCard(double progress, int completed, int total) {
     return AnimatedContainer(
       duration: const Duration(milliseconds: 500),
@@ -246,7 +243,6 @@ class _TodoScreenState extends State<TodoScreen> {
     );
   }
 
-  // منطقة الإدخال
   Widget _buildInputArea(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(6),
@@ -301,7 +297,6 @@ class _TodoScreenState extends State<TodoScreen> {
     );
   }
 
-  // قائمة المهام بـ Animations
   Widget _buildTaskList(List tasks) {
     if (tasks.isEmpty) {
       return Expanded(
